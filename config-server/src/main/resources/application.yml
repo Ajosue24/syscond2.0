@@ -1,0 +1,27 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file://${user.home}/Desarrollo/Syscod2.0/SyscondConfiguration/shared
+        #search-locations: classpath:/shared #tells spring where to locate the config files
+        git:
+          uri: https://github.com/Ajosue24/SyscondConfiguration
+          username: Ajosue24
+          password:
+          force-pull: true
+          search-paths: shared
+
+  profiles:
+    active: native #we are using native because the config server uses a git repo by default
+  application:
+    name: config-server
+
+server:
+  port: 8888 #the port where the config-server will be acessible
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bush-refresh

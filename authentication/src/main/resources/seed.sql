@@ -1,0 +1,5 @@
+INSERT INTO public.companies (id, address, business_name, created_at, deleted_at, email, enable, name, phone_number, trade_name, updated_at) VALUES (1, 'ningun lugar con muriel y justo', 'Vasquez&Vasquez', current_timestamp, null, 'vvpcca@gmail.com', true, 'Vasquez&Vasquez', '+573144340503', 'Vasquez&Vasquez', null);
+INSERT INTO public.roles (id, created_at, deleted_at, enabled, updated_at, description, features, name, company_id) VALUES (1, '2020-05-30 17:42:40.000000', null, true, null, 'Master role', null, 'SUPER_USER_ADMIN', 1);
+INSERT INTO public.document_type (id, description, name) VALUES (1, 'DefaultId', 'ID');
+INSERT INTO public.users (id, created_at, deleted_at, enabled, updated_at, account_expired, account_locked, credentials_expired, document_number, email, last_name, name, password, user_name, company_id, document_type_id) VALUES (1, '2020-05-30 17:44:03.000000', null, true, null, false, false, false, '123456789', 'josue24664@hotmail.com', 'Vasquez', 'Josue', '$2a$10$2Bh/CFmuoofz2uPdDsuw4.FgvlDwk10t905WhUZgkD.EFtLrx6gAO', 'admin', 1, 1);
+INSERT INTO public.role_user (user_id, role_id) VALUES (1, 1);
